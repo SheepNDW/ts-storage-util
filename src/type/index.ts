@@ -14,7 +14,7 @@ export interface Data<T> {
 }
 
 export interface StorageClass {
-  get: <T>(key: Key) => void;
+  get: <T>(key: Key) => Result<T | null>;
   set: <T>(key: Key, value: T, expire: Expire) => void;
   remove: (key: Key) => void;
   clear: () => void;
